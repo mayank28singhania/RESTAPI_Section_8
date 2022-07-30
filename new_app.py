@@ -15,11 +15,6 @@ new_app.secret_key = 'jose'
 api = Api(new_app)
 
 
-@new_app.before_first_request
-def create_tables():
-    db.create_all()
-
-
 # new_app.config['JWT_AUTH_URL_RULE'] = '/login'  # if you need to use /login instead of /auth
 # new_app.config['JWT_EXPIRATION_DELTA'] = timedelta(seconds=1800)  # token expiration time
 # new_app.config['JWT_AUTH_USERNAME_KEY'] = 'email'  # auth key name to be 'email' instead of default 'username'
